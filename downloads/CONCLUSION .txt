@@ -1,0 +1,99 @@
+\documentclass[12pt,a4paper]{report}%紙張設定
+\usepackage{xeCJK}%中文字體模組
+\usepackage{graphicx}%插入圖片套件
+\usepackage{tocbibind}%自動添加目錄和參考文獻到目錄中套件
+\usepackage{hyperref}%生成超連結模組
+\usepackage[margin=2cm]{geometry}%文件邊框設為2cm
+% 在 Windows 可以使用系統所安裝的字型
+\setCJKmainfont{標楷體}%設定中文字體
+\newfontfamily\sectionef{Times New Roman}%設定英文字體
+
+%=========結論==========%
+\begin{document}
+\begin{center} %文字置中
+\Large\textbf{CONCLUSION 結論} %文字變大變粗
+\end{center}\\
+
+In chapter 2 I referenced a diagram that represents a theoretical ideal of how the 
+integration of PLM with other systems should be (Figure 74). In that diagram the reader can 
+notice that ideally PLM would be the center of the system with other systems (Including 
+ERP) attached to it. Different from said diagram the Odoo software takes ERP as the center 
+with other systems attached to it. This work has shown that it is certainly possible to use 
+Odoo for PLM and MES however it has also shown that the PLM and MES implementation
+presents some weaknesses.\\
+
+在第2章中，我引用了一個圖表，它代表了 PLM 與其他系統整合的理想情況（見圖 74）。在該圖表中，讀者可以注意到，理想情況下，PLM 應該是系統的中心，其他系統（包括 ERP）都連接到它上面。與該圖表不同，Odoo 軟件將 ERP 視為中心，其他系統連接到它上面。這份工作已經表明，確實可以使用 Odoo 進行 PLM 和 MES，但同時也顯示了 PLM 和 MES 實施存在一些弱點。\\
+
+%加入701.png的圖片
+\begin{figure}[htbp]
+  \centering  %圖片置中
+  \includegraphics[]{../image/701.png}%插入在image資料夾下的701.png
+  \label{fig:701}
+\end{figure}\\
+
+\begin{center} %文字置中
+Figure 74 Comparison to the left the adapted diagram as theorized by Saaksvuori, A. 
+and Immonen, A. (2008), to the right Odoo take on how systems interact.\\
+圖74：比較左側為Saaksvuori, A.和Immonen, A.（2008）理論化的適應圖表，右側為Odoo對系統互動的看法。
+\end{center}\\
+
+The lack of file upload support on things like operation items, work centers or equipment
+is something of some concern especially considering 3D printing or CNC because access to 
+the CAD files would prove helpful to the operators. Also, there is a gap in between the facets 
+of product and tool when the company is taking upon themselves to develop and produce 
+said tooling (similar situation founded when developing the molds in the simulation).\\
+對於操作項目、工作中心或設備等方面缺乏文件上傳支持，這點尤為令人擔憂，特別是考慮到3D打印或CNC，因為操作人員能夠訪問CAD文件將會對其有所幫助。此外，當公司自行開發和生產該工具時，產品和工具之間存在一定差距（在模擬中開發模具時也遇到了類似的情況）。\\
+
+In addition, although MES provide detailed graphical representation regarding the dataset 
+that it has, it is limited to data derived from the time to completion of the operations been 
+carried out. For instance, it would be very valuable if graphical representation regarding 
+quality control was easily available as well.\\
+此外，雖然 MES 提供了有關資料集的詳細圖形表示是的，它僅限於從完成操作的時間得出的數據執行。 例如，如果有關的圖形表示非常有價值品質控制也很容易實現。\\
+
+All that said, applying ECOs to BOMs in Odoo is a procedure deserving of praise. The 
+ECO holds the information until it is ready to be applied and then it updates the BOM 
+automatically once the ECO is validated by responsible personnel. It might not look like 
+something so important now because this simulation is dealing with very simple products, 
+but it becomes exponentially more important as complexity increases. E.g. A car with 
+thousands of parts and hundreds of nested BOMs would be considered a nightmare to control 
+and keep track of change if a system like this was not present.\\
+儘管如此，在Odoo中將ECO應用於BOM是值得讚揚的程序。ECO將信息保存，直到準備好應用，然後一旦負責人員驗證了ECO，它就會自動更新BOM。現在可能看起來不那麼重要，因為這個模擬處理的是非常簡單的產品，但隨著複雜性的增加，它的重要性會成倍增加。例如，一輛擁有數千個零件和數百個嵌套BOM的汽車，如果沒有這樣的系統，將被認為是一個難以控制且難以跟踪變更的噩夢。\\
+
+This software is not perfect for PLM or MES implementation, but it does hold value in 
+the sense of availability and integration with other systems. The functionality is there
+specially regarding product and process and the software has an extremely interesting 
+integration with its natural ERP functionalities. All this makes up for a system that would 
+suit better:\\
+這個軟件並不完美用於PLM或MES的實施，但在可用性和與其他系統的集成方面具有價值。特別是在產品和流程方面，功能是存在的，而且軟件與其自然的ERP功能有著極為有趣的集成。所有這些組成了一個更合適的系統：\\
+
+
+▪ Small business that could use PLM and MES in a smaller scale.\\
+▪ 小型企業可以在較小的規模中使用PLM和MES。\\
+▪ Companies that deal with less manufacturing and more assembly or distribution 
+taking advantage of the All in One nature of the software.\\
+▪ 那些處理較少製造而更多組裝或分銷業務的公司，可以充分利用軟件的一體化特性。\\
+
+It is important to mention that the limitations of Odoo are not in the complexity of the 
+product itself but in the complexity of the operations that surround its development. All things 
+considered you could track a large and complex assembly if it includes only simple 
+manufacturing operations or if more complex engineering tasks are done by suppliers. I.e. 
+you could track the assembly of a motorcycle with ease in Odoo, but the PLM features are 
+not polish enough to track the full evolution/development of its powertrain. It is certainly
+possible to do so but it would take too much time and effort from the engineering team to be 
+considered worth it just for the sake of having an all in one solution with ERP features.\\
+重要的是要提到，Odoo的限制不在於產品本身的複雜性，而在於其開發周圍操作的複雜性。總的來說，如果組裝過程僅包含簡單的製造操作，或者更複雜的工程任務由供應商完成，則可以追踪一個大型且複雜的組裝過程。例如，您可以在Odoo中輕鬆追踪摩托車的組裝過程，但PLM功能不足以跟踪其動力系統的全面演進/開發。這當然是可能的，但要從工程團隊中投入太多時間和精力，僅僅為了擁有一個包含ERP功能的一體化解決方案而不值得。\\
+
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
